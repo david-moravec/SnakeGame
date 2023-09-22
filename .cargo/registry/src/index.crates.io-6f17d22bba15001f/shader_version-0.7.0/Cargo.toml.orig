@@ -1,0 +1,19 @@
+[package]
+
+name = "shader_version"
+version = "0.7.0"
+authors = ["bvssvni <bvssvni@gmail.com>"]
+keywords = ["shader", "version", "OpenGL", "GLSL", "piston"]
+description = "A helper library for detecting and picking compatible shaders"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/pistondevelopers/shader_version.git"
+homepage = "https://github.com/pistondevelopers/shader_version"
+
+[lib]
+
+name = "shader_version"
+path = "src/lib.rs"
+
+[dependencies]
+piston-graphics_api_version = "1.0.0"

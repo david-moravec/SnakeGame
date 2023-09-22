@@ -1,0 +1,35 @@
+[package]
+
+name = "piston_window"
+version = "0.129.0"
+authors = ["bvssvni <bvssvni@gmail.com>"]
+keywords = ["window", "piston"]
+description = "The official Piston window wrapper for the Piston game engine"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/pistondevelopers/piston_window.git"
+homepage = "https://github.com/pistondevelopers/piston_window"
+documentation = "https://docs.rs/piston_window"
+exclude = ["*.png"]
+
+[lib]
+
+path = "src/lib.rs"
+name = "piston_window"
+
+
+[dependencies]
+gfx = "0.18.1"
+gfx_device_gl = "0.16.2"
+piston = "0.53.0"
+piston2d-gfx_graphics = "0.79.0"
+piston2d-graphics = "0.43.0"
+piston-texture = "0.9.0"
+shader_version = "0.7.0"
+
+
+pistoncore-glutin_window = {version = "0.71.0", optional = true}
+
+[features]
+default = ["glutin"]
+glutin = ["pistoncore-glutin_window"]

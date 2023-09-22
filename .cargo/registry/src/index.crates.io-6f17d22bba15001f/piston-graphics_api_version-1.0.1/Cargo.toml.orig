@@ -1,0 +1,18 @@
+[package]
+name = "piston-graphics_api_version"
+version = "1.0.1"
+authors = ["Sven Nilsen <bvssvni@gmail.com>"]
+keywords = ["piston", "graphics", "api", "version"]
+description = "A library for storing graphics API versions"
+license = "MIT"
+repository = "https://github.com/PistonDevelopers/graphics_api_version.git"
+homepage = "https://github.com/PistonDevelopers/graphics_api_version"
+documentation = "https://docs.rs/piston-graphics_api_version"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "graphics_api_version"
+
+[dependencies]

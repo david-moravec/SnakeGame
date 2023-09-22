@@ -1,0 +1,35 @@
+[package]
+
+name = "piston-gfx_texture"
+version = "0.44.0"
+authors = [
+    "bvssvni <bvssvni@gmail.com>",
+    "Coeuvre <coeuvre@gmail.com>",
+    "gmorenz",
+    "leonkunert <info@leonkunert.de>",
+    "mitchmindtree <me@michellnordine.com>",
+    "Christiandh",
+    "Apointos",
+    "ccgn",
+    "reem",
+    "TyOverby <ty@pre-alpha.com>",
+    "eddyb"
+]
+keywords = ["texture", "gfx", "graphics", "piston"]
+description = "A Gfx texture representation that works nicely with Piston libraries"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/pistondevelopers/gfx_texture.git"
+homepage = "https://github.com/pistondevelopers/gfx_texture"
+documentation = "https://docs.rs/piston-gfx_texture"
+
+[lib]
+
+name = "gfx_texture"
+path = "src/lib.rs"
+
+[dependencies]
+gfx = "0.18.1"
+gfx_core = "0.9.1"
+image = "0.24.1"
+piston-texture = "0.9.0"

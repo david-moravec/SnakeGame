@@ -1,0 +1,36 @@
+[package]
+
+name = "piston2d-gfx_graphics"
+version = "0.79.0"
+authors = ["bvssvni <bvssvni@gmail.com>"]
+keywords = ["graphics", "2d", "gfx", "piston"]
+description = "A Gfx 2D back-end for the Piston game engine"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/PistonDevelopers/gfx_graphics.git"
+homepage = "https://github.com/PistonDevelopers/gfx_graphics"
+documentation = "https://docs.rs/piston2d-gfx_graphics"
+exclude = ["assets/*", "*.png", "Cargo.dot"]
+
+[lib]
+
+name = "gfx_graphics"
+
+
+[dependencies]
+gfx = "0.18.1"
+draw_state = "0.8.0"
+piston-shaders_graphics2d = "0.4.0"
+piston-gfx_texture = "0.44.0"
+shader_version = "0.7.0"
+
+[dependencies.piston2d-graphics]
+version = "0.43.0"
+features = ["glyph_cache_rusttype"]
+
+[dev-dependencies]
+pistoncore-glutin_window = "0.70.1"
+piston = "0.53.0"
+find_folder = "0.3.0"
+gfx_device_gl = "0.16.2"
+image = "0.24.1"
