@@ -1,7 +1,0 @@
-language: rust
-rust:
-  - stable
-  - nightly
-branches:
-  except:
-    - staging.tmp
