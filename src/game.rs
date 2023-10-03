@@ -102,7 +102,7 @@ impl Game {
   }
 
   fn is_snake_alive(&self, dir: Option<Direction>) -> bool {
-    let (next_x ,next_y) = self.snake.next_head_coords(dir);
+    let (next_x ,next_y) = self.snake.next_head_coords();
 
     if self.snake.is_crawling_over(next_x, next_y) {
       return false;

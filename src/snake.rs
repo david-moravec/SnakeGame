@@ -16,14 +16,14 @@ pub enum Direction {
 
 impl Direction {
   /// Returns the opposite of this [`Direction`].
-pub fn opposite(&self) -> Direction {
-    match *self {
-      Direction::Up => Direction::Down,
-      Direction::Down => Direction::Up,
-      Direction::Left => Direction::Right,
-      Direction::Right => Direction::Left,
+  pub fn opposite(&self) -> Direction {
+      match *self {
+        Direction::Up => Direction::Down,
+        Direction::Down => Direction::Up,
+        Direction::Left => Direction::Right,
+        Direction::Right => Direction::Left,
+      }
     }
-  }
 }
 
 #[derive(Clone, Debug)]
@@ -70,19 +70,23 @@ impl Snake {
   }
 
   pub fn move_forward(&mut self, dir: Option<Direction>) {
-    let (new_x, new_y) = self.next_head_coords(dir);
+    if let Some(new_dir) = dir {
+      if self.direction.opposite() != new_dir {
+        self.direction = new_dir
+      }
+    }
+
+
+    let (new_x, new_y) = self.next_head_coords();
+
     self.tail = self.body.pop_back();
     self.body.push_front(Block{x: new_x, y: new_y});
   }
 
-  pub fn head_direction(&self) -> Direction{
-    self.direction
-  }
-
-  pub fn next_head_coords(&self, dir: Option<Direction>) -> (i32, i32) {
+  pub fn next_head_coords(&self) -> (i32, i32) {
     let (head_x, head_y): (i32, i32) = self.head_position();
 
-    match dir.unwrap_or(self.direction) {
+    match self.direction {
       Direction::Up => (head_x, head_y - 1),
       Direction::Down => (head_x, head_y +1),
       Direction::Left => (head_x - 1, head_y),
